@@ -1,0 +1,41 @@
+/* components/rec-music-list/rec-music-list.wxss */
+
+.rec-title{
+    background-color: #eee;
+    padding: 20rpx 16rpx;
+    font-weight: bold;
+    font-size: 30rpx;
+}
+
+.music-cell{
+    height: 200rpx;
+    display: flex;  
+}
+
+.img-box{
+    width: 200rpx;
+    height: 200rpx;
+}
+
+.img-box image{
+    width: 180rpx;
+    height: 180rpx;
+    margin: 10rpx;
+}
+
+.music-info{
+    padding: 10rpx;
+    width: 550rpx;
+}
+
+.name-label{
+    font-size: 36rpx;
+    font-weight: bold;
+    color: #333;
+}
+
+.album-label{
+    font-size: 26rpx;
+    margin-top: 10rpx;
+    color: #666;
+}

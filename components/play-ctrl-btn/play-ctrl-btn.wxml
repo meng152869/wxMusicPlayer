@@ -1,0 +1,7 @@
+<!--components/play-ctrl-btn/play-ctrl-btn.wxml-->
+
+<image
+    src="{{musicInfo.pic?musicInfo.pic+'?param=100y100':'/images/cd.png'}}"
+    class='cd spin{{isPaused?" ani-stop":""}}'
+    bindtap='gotoPlayControl'
+></image>

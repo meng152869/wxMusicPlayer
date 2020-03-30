@@ -1,0 +1,72 @@
+<!--pages/music-list-detail/music-list-detail.wxml-->
+
+
+<view id='ctrl-bar'>
+    <view 
+        class='play-all-btn'
+        bindtap='playAllTapped'
+    >播放全部</view>
+    <view>
+        <image 
+            wx:if="{{!isFavPlayList}}"
+            class='star-icon' 
+            src='/images/heart.png'
+            bindtap='collectBtnTapped'
+        ></image>
+        <image
+            wx:else
+            class='star-icon' 
+            src='/images/heart-h.png'
+            bindtap='cancelCollectBtnTapped'
+        ></image>
+        <text class='fav-num'>9万</text>
+    </view>
+</view>
+
+
+<view id='music-list-box'>
+    <view
+        wx:for="{{musicList.tracks}}"
+        wx:key="{{index}}"
+        wx:for-item="m"
+        class='music-list-item'
+    >
+        <view class='m-title'>
+            <view>
+                <image 
+                    wx:if="{{index==currentIndex}}" 
+                    src='/images/cd.png' 
+                    class='m-cd spin{{isPaused?" ani-stop":""}}'
+                ></image>
+                {{index+1}}
+            </view>
+            <view class='m-name-artists'>
+                <view class='m-name'>{{m.name}}</view>
+                <view>{{artistsOfSong(m.ar)}}</view>
+            </view>
+        </view>
+        <view>
+            <image 
+                wx:if="{{index==currentIndex&&!isPaused}}"
+                class='play-icon' 
+                src='/images/pause-c.png'
+                bindtap='pauseBtnClick'
+                data-index='{{index}}'
+            ></image>
+            <image 
+                wx:else
+                class='play-icon' 
+                src='/images/play-c.png'
+                bindtap='playBtnClick'
+                data-index='{{index}}'
+            ></image>
+        </view>
+    </view>
+
+    
+</view>
+
+<play-ctrl-btn></play-ctrl-btn>
+
+
+<wxs src="../../script/artistsOfSong.wxs" module="artistsOfSong"></wxs>

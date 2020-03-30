@@ -1,0 +1,13 @@
+
+// 把数字改为以“万”为单位额字符串
+
+
+function wanFilter(n){
+    if(n*1<10000){
+        return n;
+    }
+
+    return Math.round(n / 10000)+"万";
+}
+
+module.exports = wanFilter;

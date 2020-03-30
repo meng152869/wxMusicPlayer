@@ -1,0 +1,20 @@
+<view class='page-root-view'>
+    <view class='info-box'>
+        <view class='avatar-box'>
+            <image 
+                wx:if="{{!userInfo}}" 
+                class='avatar' 
+                src='../../images/timg.jpg'
+            ></image>
+            <image 
+                wx:else 
+                class='avatar' 
+                src='{{userInfo.avatarUrl}}'
+            ></image>
+        </view>
+        <view class='user-info-box'>
+            <view wx:if="{{!userInfo}}" bindtap='gotoLogin'>未登录，请先登录</view>
+            <view wx:else>{{userInfo.nickname}}</view>
+        </view>
+    </view>
+</view>

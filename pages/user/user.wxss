@@ -1,0 +1,25 @@
+/* pages/user/user.wxss */
+
+.info-box{
+    height: 300rpx;
+    background-color: #eeeeee;
+
+    display: flex;
+}
+
+.avatar-box{
+    width: 240rpx;
+}
+
+.avatar{
+    width: 200rpx;
+    height: 200rpx;
+    margin: 20rpx;
+    border-radius: 50%;
+}
+
+.user-info-box{
+    padding: 20rpx;
+    font-weight: bold;
+    font-size: 40rpx;
+}

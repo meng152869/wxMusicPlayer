@@ -1,0 +1,27 @@
+/* pages/login/login.wxss */
+
+
+.login-root{
+    padding: 100rpx 40rpx 0 40rpx;
+}
+
+.form-line{
+    display: flex;
+    margin: 40rpx 0;
+    border-bottom: solid 1rpx pink;
+}
+
+.form-line label{
+    font-size: 30rpx;
+    vertical-align: middle;
+    color: #333;
+}
+
+.form-line input{
+    font-size: 30rpx;
+    padding-left: 40rpx;
+    vertical-align: middle;
+    position: relative;
+    top: -5rpx;
+    color: #666;
+}

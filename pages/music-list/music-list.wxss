@@ -1,0 +1,9 @@
+/* pages/music-list/music-list.wxss */
+
+
+.section-title{
+    background-color: #ddd;
+    font-size: 40rpx;
+    font-weight: bold;
+    padding: 16rpx;
+}

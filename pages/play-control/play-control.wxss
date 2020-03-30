@@ -1,0 +1,106 @@
+/* pages/play-control/play-control.wxss */
+
+.bg{
+    width: 100vw;
+    height: 100vh;
+    background-size: 120% 120%;
+    background-color: #d43c33;
+    filter: blur(20rpx) brightness(0.8);
+    background-position: center center;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: -100;
+}
+
+.root{
+    color: white;
+    text-shadow: 0rpx 0rpx 10rpx black;
+    text-align: center;
+}
+
+.pic-box{
+    height: 750rpx;
+    /* border: solid 3rpx black; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.lyric-box{
+    height: 750rpx;
+    box-shadow: 0 0 10rpx 0 #d43c33;
+
+    
+}
+
+.lyric-line{
+    font-size: 30rpx;
+    margin: 50rpx 0;
+
+    transition: all 0.3s;
+}
+
+.lyric-line-holder{
+    height: 30rpx;
+    margin: 50rpx 0;
+}
+
+.cd{
+    width: 600rpx;
+    height: 600rpx;
+    border-radius: 50%;
+    border: solid 10rpx white;
+}
+
+
+.m-name{
+    margin-top: 10rpx;
+    font-size: 50rpx;
+    font-weight: bold;
+}
+
+.m-artists{
+    font-size: 30rpx;
+    margin-top: 10rpx;
+}
+
+.time-label{
+    font-size: 30rpx;
+}
+
+
+.play-ctrl-bar{
+    display: flex;
+    justify-content: space-around;
+}
+
+.play-ctrl-icon{
+    width: 100rpx;
+    height: 100rpx;
+    /* box-shadow: 0 0 0rpx 0 purple inset; */
+    
+}
+
+.play-mode-bar{
+    margin-top: 20rpx;
+    display: flex;
+    justify-content: space-around;
+}
+
+.play-mode-icon{
+    width: 60rpx;
+    height: 60rpx;
+}
+
+.lyric-line-highlighted{
+    font-size: 46rpx;
+    color: #acfdf7;
+}
+
+
+.play-mode-icon-high{
+    filter: saturate(1000%);
+    transform: scale(1.2,1.2);
+}

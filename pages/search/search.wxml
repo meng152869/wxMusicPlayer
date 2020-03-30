@@ -1,0 +1,31 @@
+<view class='page-root-view'>
+
+    <view class='search-box'>
+        <view class='search-line'>
+            <input 
+                placeholder='请输入歌曲或歌手。。。'
+                bindinput='keywordsChange'
+                value="{{keyword}}"
+            ></input>
+            <image src='/images/search.png'></image>
+        </view>
+    </view>
+
+    <search-result 
+        wx:if="{{resultList.length>0}}"
+        recMusicList="{{resultList}}"
+    ></search-result>
+
+
+    <view wx:else class='hot-search-box'>
+        <text 
+            wx:for="{{hotWords}}" 
+            wx:key="{{index}}"
+            class='hot-item'
+            bindtap='hotItemClick'
+            data-word="{{item.first}}"
+        >{{item.first}}</text>
+    </view>
+
+    
+</view>

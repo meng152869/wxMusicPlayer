@@ -1,0 +1,36 @@
+<!--components/search-result/search-result.wxml-->
+
+
+<view>
+
+    <view>
+        <view 
+            id='qqq'
+            wx:for="{{recMusicList}}" 
+            wx:for-item="m"
+            wx:key="{{index}}"
+            class='music-cell'
+            bindtap='mCellClick'
+            data-music="{{m}}"
+        >
+            
+            <view class='music-info'>
+                <view class='name-label'>{{m.name}}</view>
+                <view class='album-label'>
+                    <view>
+                        <view class='album-text'>
+                            <text>演唱:</text>
+                            <text 
+                                wx:for="{{m.artists}}" 
+                                wx:key="{{index}}"
+                            >{{item.name}}{{index<m.artists.length-1?'，':''}}</text>
+                        </view>
+                    </view>
+                    <view class='album-text'>专辑《{{m.album.name}}》</view>
+                </view>
+                
+            </view>
+        </view>
+    
+    </view>
+</view>

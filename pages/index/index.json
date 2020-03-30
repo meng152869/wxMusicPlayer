@@ -1,0 +1,8 @@
+{
+    "usingComponents": {
+        "recommend-com":"/components/recommend-com/recommend-com",
+        "rec-music-list":"/components/rec-music-list/rec-music-list"
+    },
+    "navigationBarTitleText": "推荐",
+    "enablePullDownRefresh": true
+}

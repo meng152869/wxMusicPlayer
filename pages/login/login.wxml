@@ -1,0 +1,13 @@
+<view class='login-root'>
+    <view class='form-line'>
+        <label>手机号</label>
+        <input bindinput='telInput'></input>
+    </view>
+
+    <view class='form-line'>
+        <label>密　码</label>
+        <input bindinput='pswInput' type='password'/>
+    </view>
+
+    <button type='primary' bindtap='loginBtnTapped'>登录</button>
+</view>

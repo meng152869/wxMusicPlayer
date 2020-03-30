@@ -1,0 +1,29 @@
+<view>
+
+    
+    <view class='list-box'>
+        <view 
+            class='list-item' 
+            wx:for="{{recommendListGroup}}" 
+            wx:key="{{index}}"
+            bindtap='listItemClick'
+            data-pid="{{item.id}}"
+        >
+            <image src='{{item.picUrl}}?param=200y200'></image>
+            <view class='info-box'>
+                <view class='name-line'>{{item.name}}</view>
+                <view class='copywriter-line'>{{item.copywriter}}</view>
+                <view class='play-line'>
+                    <text>播放：{{wanFilter(item.playCount)}}</text>
+                    <text>歌曲数：{{item.trackCount}}</text>
+                </view>
+            </view>
+        </view>
+        <view
+            class='list-item-placeholder' 
+        ></view>
+    </view>
+</view>
+
+
+<wxs src="../../script/wan-filter.wxs" module="wanFilter"></wxs>

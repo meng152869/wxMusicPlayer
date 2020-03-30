@@ -1,0 +1,60 @@
+/* components/recommend-com/recommend-com.wxss */
+
+
+
+.list-box{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.info-box{
+    text-align: left;
+}
+
+.list-item{
+    width: 350rpx;
+    /* border: solid 1rpx black; */
+    text-align: center;
+    padding: 16rpx;
+    background-color: #f0f0f0;
+    margin: 16rpx 0;
+    font-size: 20rpx;
+    box-sizing: border-box;
+    /* border-radius: 16rpx; */
+}
+
+.list-item-placeholder{
+    width: 350rpx;
+    padding: 16rpx;
+    margin: 16rpx 0;
+    box-sizing: border-box;
+}
+
+
+.list-item image{
+    width: 300rpx;
+    height: 300rpx;
+    /* border-radius: 16rpx; */
+}
+
+.name-line{
+    font-size: 26rpx;
+    color: #333;
+    font-weight: bold;
+}
+
+.copywriter-line{
+    font-size: 24rpx;
+    color: #666;
+    height: 100rpx;
+    overflow: hidden;
+
+    
+}
+
+.play-line{
+    display: flex;
+    justify-content: space-between;
+    color: #999;
+}

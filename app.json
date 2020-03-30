@@ -1,0 +1,54 @@
+{
+    "usingComponents": {
+        "play-ctrl-btn": "components/play-ctrl-btn/play-ctrl-btn"
+    },
+    "pages": [
+        "pages/music-list/music-list",
+        "pages/index/index",
+        "pages/music-list-detail/music-list-detail",
+        "pages/search/search",
+        "pages/user/user",
+        "pages/login/login",
+        "pages/play-control/play-control"
+    ],
+    "window": {
+        "backgroundTextStyle": "light",
+        "navigationBarBackgroundColor": "#d43c33",
+        "navigationBarTitleText": "...",
+        "navigationBarTextStyle": "white"
+    },
+    "tabBar": {
+        "selectedColor": "#d81e06",
+        "list": [
+            {
+                "pagePath": "pages/music-list/music-list",
+                "text": "歌单",
+                "iconPath": "images/music-list.png",
+                "selectedIconPath": "images/music-list-h.png"
+            },
+            {
+                "pagePath": "pages/index/index",
+                "text": "推荐",
+                "iconPath": "images/recommend.png",
+                "selectedIconPath": "images/recommend-h.png"
+            },
+            
+            {
+                "pagePath": "pages/search/search",
+                "text": "搜索",
+                "iconPath": "images/search.png",
+                "selectedIconPath": "images/search-h.png"
+            },
+            {
+                "pagePath": "pages/user/user",
+                "text": "用户",
+                "iconPath": "images/user.png",
+                "selectedIconPath": "images/user-h.png"
+            }
+        ]
+    },
+    "requiredBackgroundModes": [
+        "audio"
+    ],
+    "sitemapLocation": "sitemap.json"
+}

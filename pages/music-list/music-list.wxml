@@ -1,0 +1,16 @@
+<!--pages/music-list/music-list.wxml-->
+
+<view>
+    <view class='section-title'>我的歌单</view>
+    <button type='primary'>新建歌单</button>
+    <recommend-com recommendListGroup="{{myMusicList}}"></recommend-com>
+</view>
+
+
+<view>
+    <view class='section-title'>收藏歌单</view>
+    <recommend-com recommendListGroup="{{favMusicList}}"></recommend-com>
+</view>
+
+
+<play-ctrl-btn></play-ctrl-btn>

@@ -1,0 +1,27 @@
+/* components/search-result/search-result.wxss */
+
+
+.music-cell{
+    /* height: 180rpx; */
+    display: flex;
+    border-bottom: solid 1rpx #999;
+    padding-left: 20rpx;
+    padding-bottom: 20rpx;
+}
+
+.music-info{
+    padding: 10rpx;
+    width: 550rpx;
+}
+
+.name-label{
+    font-size: 36rpx;
+    font-weight: bold;
+    color: #333;
+}
+
+.album-label{
+    font-size: 26rpx;
+    margin-top: 10rpx;
+    color: #666;
+}

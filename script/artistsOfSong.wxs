@@ -1,0 +1,14 @@
+
+// 将演唱者数组改为字符串。
+
+function artistsOfSong(arr){
+
+    if(!arr){
+        return null;
+    }
+    return arr.map(function(a){
+        return a.name;
+    }).join(",");
+}
+
+module.exports = artistsOfSong;

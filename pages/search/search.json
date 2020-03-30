@@ -1,0 +1,8 @@
+{
+    "usingComponents": {
+        "search-result": "/components/search-result/search-result"
+    },
+    "onReachBottomDistance":50,
+    "backgroundColor":"#eeeeee",
+    "navigationBarTitleText": "搜索"
+}

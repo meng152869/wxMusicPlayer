@@ -1,0 +1,23 @@
+/**app.wxss**/
+
+
+@keyframes spin{
+    0%{
+        transform: rotate(0);
+    }
+
+    100%{
+        transform: rotate(359deg);
+    }
+}
+
+.spin{
+    animation-name: spin;
+    animation-duration: 8s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+.ani-stop{
+    animation-play-state: paused;
+}

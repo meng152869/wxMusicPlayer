@@ -1,0 +1,13 @@
+<view class='page-root-view'>
+
+    <view class='rec-title'>推荐歌单</view>
+    <recommend-com recommendListGroup="{{recommendListGroup}}"></recommend-com>
+
+    <rec-music-list 
+        recMusicList="{{recMusicList}}"
+        title="每日推荐歌曲"
+    />
+
+    <play-ctrl-btn></play-ctrl-btn>
+
+</view>

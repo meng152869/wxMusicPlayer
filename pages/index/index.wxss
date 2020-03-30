@@ -1,0 +1,9 @@
+
+
+
+.rec-title{
+    background-color: #eee;
+    padding: 20rpx 16rpx;
+    font-weight: bold;
+    font-size: 30rpx;
+}

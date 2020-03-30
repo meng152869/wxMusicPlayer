@@ -1,0 +1,147 @@
+<!--pages/play-control/play-control.wxml-->
+
+
+
+<view 
+    style='background-image:url({{musicInfo.pic?(musicInfo.pic+"?param=500y500"):""}})' 
+    class='bg'
+>
+    
+</view>
+
+
+<view class='root'>
+    <view  
+        class='pic-box'
+        bindtap='toggleLyric'
+        style='display:{{!showLyric?"flex":"none"}}'
+    >
+        <image 
+            src='{{musicInfo.pic?(musicInfo.pic+"?param=300y300"):""}}' 
+            class='cd spin{{isPaused?" ani-stop":""}}'
+        ></image>
+    </view>
+    <scroll-view 
+        style='display:{{showLyric?"block":"none"}}'
+        class='lyric-box'
+        bindtap='toggleLyric'
+        scroll-y
+        scroll-into-view="l{{lrcIndex}}"
+        scroll-with-animation
+        bindtouchstart='lyricTouchStart'
+        bindtouchend='lyricTouchEnd'
+        bindtouchcancel='lyricTouchEnd'
+    >
+        <view 
+            class='lyric-line-holder'
+            wx:for="{{4}}"
+            wx:key="a{{index}}"
+            id="l{{index}}"
+        ></view>
+        <view 
+            wx:for="{{musicInfo.lyric}}"
+            wx:key="b{{index}}"
+            class='lyric-line{{highLightedIndex==index?" lyric-line-highlighted":""}}'
+            id="l{{index+4}}"
+        >{{item.lrc}}</view>
+
+        <view 
+            class='lyric-line-holder'
+            wx:for="{{4}}"
+            wx:key="c{{index}}"
+            
+        ></view>
+        
+    </scroll-view>
+
+    <view class='m-name'>{{musicInfo.name}}</view>
+    <view class='m-artists'>演唱：{{musicInfo.artists}}</view>
+
+    <slider
+        max="{{duration}}"
+        value="{{currentTime}}"
+        bindchange="progressChange"
+        bindchanging="progressChanging"
+    ></slider>
+
+    <view class='time-label'>{{secondToMinute(currentTime)}}/{{secondToMinute(duration)}}</view>
+
+    <view class='play-ctrl-bar'>
+        <image 
+            src='/images/prev.png' 
+            class='play-ctrl-icon'
+            bindtap='prevBtnTapped'
+        ></image>
+        <image 
+            wx:if="{{isPaused}}"
+            src='/images/play.png' 
+            class='play-ctrl-icon'
+            bindtap='playTapped'
+        ></image>
+        <image 
+            wx:else
+            src='/images/pause.png' 
+            class='play-ctrl-icon'
+            bindtap='pauseTapped'
+        ></image>
+        <image 
+            src='/images/next.png' 
+            class='play-ctrl-icon'
+            bindtap='nextBtnTapped'
+        ></image>
+    </view>
+
+
+    <view class='play-mode-bar'>
+        <image 
+            src='/images/loop.png'
+            class='play-mode-icon{{playMode=="loop"?" play-mode-icon-high":""}}'
+            bindtap='loopTapped'
+        ></image>
+        <image
+            src='/images/random.png' 
+            class='play-mode-icon{{playMode=="random"?" play-mode-icon-high":""}}'
+            bindtap='randomTapped'
+        ></image>
+        <image 
+            src='/images/single-loop.png' 
+            class='play-mode-icon{{playMode=="single"?" play-mode-icon-high":""}}'
+            bindtap='singleTapped'
+        ></image>
+
+
+        <image 
+            wx:if="{{!isInLikeList}}"
+            src='/images/star.png'
+            class='play-mode-icon'
+            bindtap='collectTapped'
+        ></image>
+
+        <image
+            wx:else
+            src='/images/star.png'
+            class='play-mode-icon play-mode-icon-high'
+            bindtap='cancelCollectTapped'
+        ></image>
+
+        <!-- <image 
+            wx:if="{{!isDownloading}}"
+            src='/images/download.png' 
+            class='play-mode-icon'
+            bindtap='downloadTapped'
+        ></image>
+        <image
+            wx:else
+            src='/images/loading.png' 
+            class='play-mode-icon spin'
+        ></image> -->
+
+
+        
+    </view>
+
+</view>
+
+
+
+<wxs src="../../script/secondToMinute.wxs" module="secondToMinute"></wxs>
